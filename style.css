@@ -405,6 +405,7 @@ header {
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;
+	color: var(--teal);
 }
 
 .p-button::after {
@@ -417,12 +418,12 @@ header {
 	width: 100%;
 	text-align: center;
 	padding-top: 10px;
-	transition: 0.3s;
+	transition: 0.5s;
+	color: white;
 }
 
 .p-button:hover:after {
 	height: 0;
-	color: var(--teal);
 	z-index: -1;
 }
 
