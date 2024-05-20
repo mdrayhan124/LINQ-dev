@@ -503,36 +503,37 @@ header {
 }
 
 .pm-slider-bg {
+	background-image: url(./images/mobile-circle.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 800px;
-}
-
-.pm-slider-bg img {
-	position: absolute;
-	height: 600px;
-	width: 600px;
+	height: 100%;
+	width: 100%;
 }
 
 .pm-slider-container {
-	height: 700px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	height: 500px;
+	width: 500px;
+	margin: auto;
 }
 
 .pm-slider {
-	width: 200px;
-	height: 400px;
+	width: 150px;
+	height: 300px;
+	margin: auto;
 	position: relative;
 }
 
 .pm-slider img {
 	height: 100%;
 	width: 100%;
-	top: 0;
-	left: 0;
+	position: absolute;
+	top: 35%;
+	overflow: hidden;
+}
+
+.pm-slider img :not(.active){
+	top: -100%;
 }
 
 /* sucsess css */
