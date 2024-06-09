@@ -11,23 +11,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="nav-logo">
-          <img src="" alt="logo" />
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="#">
+            <div class="nav__logo">
+              <i class="fa-solid fa-globe"></i>LINQ-Dev
+            </div>
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars nav__burger"></i>
+            <i class="fa-solid fa-xmark nav__close"></i>
+          </div>
         </div>
-        <ul class="bx-x" id="list-item">
-          <li><a href="#home">home</a></li>
-          <li><a href="#features"> Features </a></li>
-          <li><a href="#chooseUs"> Why Choose Us </a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#clients">Clients</a></li>
-          <li><a href="#payment">Payment</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#login">log in</a></li>
-        </ul>
-        <div class="nav-burger" id="menu-icon">
-          <i class="fa-solid fa-bars"></i>
+        <!-- nav menu -->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="" class="nav__link">Home</a>
+            </li>
+            <li>
+              <a href="" class="nav__link">Features</a>
+            </li>
+            <li>
+              <a href="" class="nav__link">Why Choose Us</a>
+            </li>
+            <li>
+              <a href="" class="nav__link">Pricing</a>
+            </li>
+            <li>
+              <a href="" class="nav__link">Payment</a>
+            </li>
+            <li>
+              <a href="" class="nav__link">Clients</a>
+            </li>
+            <li>
+              <a href="" class="nav__link">Contact</a>
+            </li>
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -343,7 +370,7 @@
       <div class="pm-slider-container">
         <div class="pm-slider-bg">
           <div class="pm-slider">
-            <img src="./images/mobile-image-4.png" alt="" class="active"/>
+            <img src="./images/mobile-image-4.png" alt="" class="active" />
             <img src="./images/mobile-image-5.png" alt="" />
             <img src="./images/mobile-image-6.png" alt="" />
           </div>
@@ -458,17 +485,13 @@
     <!-- setting-Up -->
     <section class="setting-Up">
       <div class="container">
-        <div class="half-div">
-
-        </div>
+        <div class="half-div"></div>
         <div class="settinup-box">
           <h4>Setting up Institution?</h4>
           <p>Please request a demo.</p>
           <div class="input-email">
-            <input type="email" placeholder="Email Address">
-            <div class="ie-button">
-              SUBMIT
-            </div>
+            <input type="email" placeholder="Email Address" />
+            <div class="ie-button">SUBMIT</div>
           </div>
         </div>
 
@@ -484,44 +507,15 @@
     </section>
     <footer>
       <div class="container">
-        <p>© Sheba Digital Limited | Sheba Shikkha v3.0.0, All Rights Reserved.</p>
+        <p>
+          © Sheba Digital Limited | Sheba Shikkha v3.0.0, All Rights Reserved.
+        </p>
       </div>
     </footer>
     <!-- javaScript -->
     <script>
       // toggleMenu Script
-      let menuIcon = document.querySelector("#menu-icon");
-      let navbar = document.querySelector(".navbar");
-      menuIcon.onclick = () => {
-        menuIcon.classList.toggle("bx-x");
-        // navbar.classList.toggle("active");
-      };
 
-      let sections = document.querySelectorAll("section");
-      let navLinks = document.querySelectorAll("header nav a");
-
-      window.onscroll = () => {
-        // alert('Hi');
-        sections.forEach((sec) => {
-          let top = window.scrollY;
-          let offset = sec.offsetTop - 150;
-          // alert(offset);
-          let height = sec.offsetHeight;
-          let id = sec.getAttribute("id");
-          if (top >= offset && top < offset + height) {
-            navLinks.forEach((links) => {
-              links.classList.remove("active");
-              document
-                .querySelector("header nav a[href*=" + id + "]")
-                .classList.add("active");
-            });
-          }
-        });
-        let header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 100);
-        menuIcon.classList.remove("bx-x");
-        navbar.classList.remove("active");
-      };
       // sliders Script
       let slider = document.querySelectorAll("#sliders");
       var count = 0;
