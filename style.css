@@ -1033,3 +1033,48 @@ footer p{
 		margin-top: 2rem;
 	}
 }
+
+@media screen and (max-width: 1118px) {
+	.nav__menu{
+		position: absolute;
+		left: 0;
+		top: 2.5rem;
+		width: 100%;
+		background-color: gray;
+		height: calc(100vh-3.5rem);
+		overflow: auto;
+		opacity: 0;
+		transition: top .4s, opcity .3s;
+	}
+
+	.nav__menu::-webkit-scrollbar{
+		width: 0;
+	}
+
+	.nav__list{
+		background-color: var(--white);
+		top: 1rem;
+	}
+}
+
+.nav__link{
+	color: var(--teal);
+	background-color: var(--white);
+	font-weight: 700;
+	padding: 1.25rem 1.5rem;
+	display: flex;
+	align-items: center;
+	transition: background-color .3s;
+
+}
+
+.nav__link:hover{
+	background-color: var(--teal);
+	color: var(--white);
+}
+
+.show-menu{
+	opacity: 1;
+	top: 3.5rem;
+	pointer-events: initial;
+}
